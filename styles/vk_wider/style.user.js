@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         [vk.com] VK Wider (with user.js base)
-// @version      0.0.1
+// @version      0.0.2
 // @description  More reasonable space use
 // @author       stsyn
 // @match        https://vk.com/*
@@ -590,6 +590,7 @@ Old messages
 .im-chat-input.im-chat-input_classic .im-chat-input--textarea{width:calc(100% - 67px)}
 .im-chat-input .im-chat-input--text {padding-right:11px}
 .draggable_thumb,.thumb_wrap {min-height:100px !important; min-width:120px !important; display:inline-block; margin: 0 5px 5px 0 !important; z-index:118}
+.ui_thumb_x_button._close_btn {z-index:119}
 .editable_thumbs{width:100% !important}
 .draggable_thumb img {min-width:100% !important; min-height:100% !important; margin:0 !important}
 .im-chat-input .im-chat-input--send {position: fixed;left: 528px;padding: 0;bottom: 12px; z-index:-1}
