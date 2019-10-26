@@ -117,5 +117,10 @@ function initiate(data) {
 			setTimeout(() => renderSettings(data, loadSaved(data.id)), 100);
 		}
 	});
+  if (document.readyState !== 'loading') {
+    if (location.pathname == '/s') {
+			setTimeout(() => renderSettings(data, loadSaved(data.id)), 100);
+		}
+  }
 	applyStyle(data, loadSaved(data.id));
 }
