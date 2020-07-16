@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         [vk.com] VK Wider (with user.js base)
-// @version      0.0.5
+// @version      0.0.6
 // @description  More reasonable space use
 // @author       stsyn
 // @match        https://vk.com/*
@@ -62,13 +62,14 @@
 .photos_container .photos_row_wrap,.photos_container{display:inline;white-space:normal;margin-right:5px}
 .photos_container .photos_row_wrap:last-child{margin-right:0}`;
 
-  const top_base = `#page_header {width:calc(100% - 80px) !important; padding-left:25px; padding-right:55px}
-.head_nav_item:nth-child(2) {width:calc(30% - 40px)}
-.ts_cont_wrap{left:190px;width:calc(30% - 53px)}
-.input_back,.input_back_wrap,#ts_wrap{width:100%}
-.input_back_content,input.text.ts_input {width:100% !important;}
-#top_notify_wrap {width:calc(50%); position:fixed; left:25%}
-#top_notify_cont {width:100% !important}`
+  const top_base = `[dir] #page_header {width:calc(100% - 80px) !important; padding-left:25px; padding-right:55px}
+[dir] .head_nav_item:nth-child(2) {width:calc(30% - 40px)}
+[dir] .ts_cont_wrap{left:190px;width:calc(30% - 53px)}
+[dir] .input_back,.input_back_wrap,#ts_wrap{width:100%}
+[dir] .input_back_content,
+[dir] input.text.ts_input {width:100% !important;}
+[dir] #top_notify_wrap {width:calc(50%); position:fixed; left:25%}
+[dir] #top_notify_cont {width:100% !important}`
 
   let exw_base = `#side_bar .left_label{width:0px}
 #side_bar {width:auto}
