@@ -588,8 +588,8 @@ Old messages
 .im-chat-input .im-chat-input--send {left:-51px;right:auto}
 [dir] .im-send-btn {width:170px; height:30px; border-radius:10px; margin-top:0px; background:rgba(118, 141, 165, 0.24)}
 .im-chat-input .im-chat-input--send {position:relative;left:8px;padding:0; bottom:-2px}
-.im-chat-input.im-chat-input_classic .im-chat-input--textarea{margin-left:0}
-.im-chat-input.im-chat-input_classic .im-chat-input--textarea{width:calc(100% - 67px)}
+[dir] .im-chat-input.im-chat-input_classic .im-chat-input--textarea{margin-left:0}
+[dir] .im-chat-input.im-chat-input_classic .im-chat-input--textarea{width:calc(100% - 67px)}
 .im-chat-input .im-chat-input--text {padding-right:11px}
 .draggable_thumb,.thumb_wrap {min-height:100px !important; min-width:120px !important; display:inline-block; margin: 0 5px 5px 0 !important}
 .ui_thumb_x_button._close_btn {z-index:119}
