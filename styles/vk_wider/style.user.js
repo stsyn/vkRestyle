@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         [vk.com] VK Wider (with user.js base)
-// @version      0.0.6
+// @version      0.0.7
 // @description  More reasonable space use
 // @author       stsyn
 // @match        https://vk.com/*
@@ -148,14 +148,15 @@ Videos
 Music
 */
 
-#audio_layer_tt{width:calc(100% - 200px) !important; position:fixed; top:42px !important; left:100px !important; margin-left:0 !important}
-.audio_page_layout .audio_friends_list_content,
-.audio_layer_container .audio_page_content_block_wrap {width:100% !important}
-.audio_layer_container .has_friends_block .audio_page__rows_wrap {width:calc(67% - 8px)}
-.audio_layer_container .audio_friends_list_wrap {width:calc(33% - 4px) !important}
-.audio_page_layout .has_friends_block .audio_page__rows_wrap{width:calc(67% - 14px)}
-.audio_page_layout .audio_friends_list_wrap{width:calc(33% - 7px) !important}
-.audio_friends_fixed{position:static !important}
+[dir] #audio_layer_tt{width:calc(100% - 200px) !important; position:fixed; top:42px !important; left:100px !important; margin-left:0 !important}
+[dir] .audio_page_layout .audio_friends_list_content,
+[dir] .audio_layer_container .audio_page_content_block_wrap {width:100% !important}
+[dir] .audio_layer_container .has_friends_block .audio_page__rows_wrap {width:calc(67% - 8px)}
+[dir] .audio_layer_container .audio_friends_list_wrap {width:calc(33% - 4px) !important}
+[dir] .audio_page_layout .has_friends_block .audio_page__rows_wrap{width:calc(67% - 14px)}
+[dir] .audio_page_layout .audio_friends_list_wrap{width:calc(33% - 7px) !important}
+.audio_layer_container .CatalogSection__leftColumn {max-width: none}
+[dir] .audio_friends_fixed{position:static !important}
 
 
 /*
