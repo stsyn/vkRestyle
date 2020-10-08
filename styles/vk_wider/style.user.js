@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         [vk.com] VK Wider (with user.js base)
-// @version      0.0.7
+// @version      0.0.8
 // @description  More reasonable space use
 // @author       stsyn
 // @match        https://vk.com/*
@@ -65,19 +65,18 @@
   const top_base = `[dir] #page_header {width:calc(100% - 80px) !important; padding-left:25px; padding-right:55px}
 [dir] .head_nav_item:nth-child(2) {width:calc(30% - 40px)}
 [dir] .ts_cont_wrap{left:190px;width:calc(30% - 53px)}
-[dir] .input_back,.input_back_wrap,#ts_wrap{width:100%}
 [dir] .input_back_content,
 [dir] input.text.ts_input {width:100% !important;}
 [dir] #top_notify_wrap {width:calc(50%); position:fixed; left:25%}
 [dir] #top_notify_cont {width:100% !important}`
 
-  let exw_base = `#side_bar .left_label{width:0px}
+  let exw_base = `#side_bar .left_label{display: none}
 #side_bar {width:auto}
 #side_bar .side_bar_inner {width:48px}
 #side_bar .left_icon{width:25px}
 .left_menu_nav_wrap, #ads_left, #left_blocks, #side_bar .more_div {display:none}
 #page_body {width: calc(100% - 80px) !important;}
-.im-right-menu {left:95px; width: calc(100% - 115px);max-width: calc(100% - 115px);}
+[dir] .im-right-menu {left:95px; width: calc(100% - 110px);max-width: calc(100% - 110px);}
 .im-page.im-page_classic .im-page--chat-input, .im-page.im-page_classic .im-page--dialogs-footer, .im-create.im-create_classic {max-width: calc(100% - 110px);width: calc(100% - 110px);}
 .top_home_link {width:50px}
 .top_audio_player{max-width:250px;font-size:90%}
@@ -293,9 +292,9 @@ Old messages
 [dir] .im-create .im-create--dcontent{width:100% !important}
 [dir] .im-create.im-create_classic .im-creation--item{width:calc(50% - 40px); display:inline-block}
 
-[dir] .im-page.im-page_classic .im-page--toolsw {background: none}
-[dir] .im-page.im-page_classic .im-page--chat-header{right: 14px; top: 58px; z-index:111 !important; position:fixed; height:41px; border:none; background:none; width:auto}
-[dir] .im-page.im-page_classic .im-page--chat-header-in {box-shadow:none; width:auto}
+[dir] .im-page.im-page_classic .im-page--toolsw {background: none !important; border: none}
+[dir] .im-page.im-page_classic .im-page--chat-header{right: 14px; top: 58px; z-index:111 !important; position:fixed; height:41px; border:none; background:none !important; width:auto}
+[dir] .im-page.im-page_classic .im-page--chat-header-in {box-shadow:none !important; width:auto}
 [dir] .im-page.im-page_classic .im-search .im-search--wrap .ui_search .ui_search_field {padding:12px 44px 11px 28px}
 [dir] .im-page.im-page_classic .im-search .im-search--btn {margin-top:8px}
 [dir] .im-page.im-page_classic .im-search .im-search--calendar {margin-top:14px}
@@ -315,7 +314,7 @@ Old messages
 [dir] .im-page.im-page_classic .im-page--selected-messages {right: 454px; top: 38px; z-index: 111; border: none; position: fixed;}
 [dir] .im-page.im-page_classic .im-page--dialogs-search {box-shadow:none}
 [dir] .im-page.im-page_classic .im-page--dcontent{margin-top:37px}
-[dir] .im-page.im-page_classic .im-page--pinned._im_pinned{position: relative; top: 45px}
+[dir] .im-page.im-page_classic .im-page--pinned._im_pinned{position: absolute; bottom: -90px; right: 0}
 [dir] .im-page.im-page_classic .im-dialog-select.im-dialog-select_classic {padding: 21px 20px 9px 10px;}
 [dir] .im-right-menu {bottom:auto; top:27px; left:195px; z-index:10; margin-left:0;width:calc(100% - 210px);max-width:calc(100% - 210px);border-top:1px solid RGBA(207,207,207,0.09); border-radius:0}
 [dir] .im-right-menu .ui_rmenu {padding-left:20px}
@@ -718,10 +717,10 @@ div.media_preview {max-width: none;}
       type:'boolean',
       actions:{
         __append:`.audio_w_covers .audio_row .audio_row__performers,
-.audio_w_covers .audio_row .audio_row__title {position:static; display:inline-block;}
+.audio_w_covers .audio_row .audio_row__title {position:static; display:inline-block; vertical-align: top;}
 .audio_w_covers .audio_row .audio_row__performer_title {display:block !important}
 .audio_w_covers .audio_row .audio_row__title_inner:before {content:"— ";}
-.audio_w_covers .audio_row .audio_row__performer_title {height:auto;padding-top:6px;}
+.audio_w_covers .audio_row .audio_row__performer_title {height:auto; padding-top:3px;}
 .audio_w_covers .audio_row .audio_row__cover, .audio_w_covers .audio_row .audio_row__cover_back, .audio_w_covers .audio_row .audio_row__cover_icon, .audio_w_covers .audio_row .audio_row__sound_bars {height:22px;width:22px;top:4px}
 .audio_w_covers .audio_row .audio_row__inner {height:auto;padding-top:2px;padding-left:32px;}
 .audio_w_covers .audio_row .audio_row__duration {top:5px;}
@@ -729,6 +728,7 @@ div.media_preview {max-width: none;}
 .audio_w_covers .audio_row .audio_row__actions {margin-top:-14px;}
 .audio_w_covers .vk_audio_size_info_wrap {margin-top:4px}
 .vk_audio_size_info_wrap span {display:inline-block}
+[dir] .audio_w_covers .audio_row .audio_row__actions { margin-top: -16px }
 .audio_w_covers .audio_row {height:31px;padding:0;}`
       }
     },
