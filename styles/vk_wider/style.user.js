@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         [vk.com] VK Wider (with user.js base)
-// @version      0.0.8
+// @version      0.0.9
 // @description  More reasonable space use
 // @author       stsyn
 // @match        https://vk.com/*
@@ -662,6 +662,7 @@ div.media_preview {max-width: none;}
 #page_wrap .im-page.im-page_classic .emoji_cat_title_helper[data-id="-1"] {display:none}
 #page_wrap .im-page.im-page_classic .emoji_smiles_row:nth-child(2) {position:fixed;bottom:4px; left:calc(630px - 100vw);}
 #page_wrap .im-page.im-page_classic .im-chat-input .emoji_tt_wrap.tt_down{
+  pointer-events: all;
   display: block !important;
   opacity: 1 !important;
   position: fixed;
